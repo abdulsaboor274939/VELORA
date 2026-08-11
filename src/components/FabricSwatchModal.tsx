@@ -115,6 +115,7 @@ export const FabricSwatchModal: React.FC<FabricSwatchModalProps> = ({
                   <img
                     src={fabric.image}
                     alt={fabric.name}
+                    referrerPolicy="no-referrer"
                     className="w-10 h-10 rounded-xl object-cover border border-[#E5C5C0]"
                   />
                   <div>
@@ -136,6 +137,7 @@ export const FabricSwatchModal: React.FC<FabricSwatchModalProps> = ({
               <img
                 src={selectedFabric.image}
                 alt={selectedFabric.name}
+                referrerPolicy="no-referrer"
                 className={`w-full h-full object-cover transition-transform duration-500 ${
                   isZoomed ? 'scale-150 cursor-zoom-out' : 'scale-100 cursor-zoom-in'
                 }`}

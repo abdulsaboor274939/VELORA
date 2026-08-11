@@ -81,6 +81,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
                       <img
                         src={item.product.image}
                         alt=""
+                        referrerPolicy="no-referrer"
                         className="w-full h-full object-cover object-top"
                       />
                     ) : (
