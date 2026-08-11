@@ -1,23 +1,6 @@
 import { DressProduct } from '../types';
 
-import imgArt1 from '../assets/images/article_1_maroon_1786450472291.jpg';
-import imgArt2 from '../assets/images/article_2_floral_1786450493069.jpg';
-import imgArt3 from '../assets/images/article_3_lavender_1786450506443.jpg';
-import imgArt4 from '../assets/images/article_4_burgundy_1786450519984.jpg';
-import imgArt5 from '../assets/images/article_5_tie_skirt_1786450539149.jpg';
-import imgArt6 from '../assets/images/article_6_pink_wrap_1786450552217.jpg';
-import imgArt7 from '../assets/images/article_7_pink_peplum_1786450564365.jpg';
-import imgArt8 from '../assets/images/article_8_grey_plaid_1786450576088.jpg';
-import imgArt9 from '../assets/images/article_9_brown_suit_1786450594421.jpg';
-import imgArt10 from '../assets/images/article_10_rust_heart_1786450608201.jpg';
-import imgArt11 from '../assets/images/article_11_sage_lavender_1786450619358.jpg';
-import imgArt12 from '../assets/images/article_12_black_leopard_1786450630970.jpg';
-import imgArt13 from '../assets/images/article_13_yellow_pastel_1786450647218.jpg';
-import imgArt14 from '../assets/images/article_14_black_bow_1786450658038.jpg';
-import imgArt15 from '../assets/images/article_15_olive_shirt_1786450669997.jpg';
-import imgArt16 from '../assets/images/article_16_burgundy_skirt_1786450682860.jpg';
-
-export const HERO_IMAGE = imgArt1;
+export const HERO_IMAGE = '/images/article_1_maroon_1786450472291.jpg';
 
 export const FEATURED_PRODUCTS: DressProduct[] = [
   {
@@ -26,8 +9,11 @@ export const FEATURED_PRODUCTS: DressProduct[] = [
     title: 'Maroon Tunic & Heart Embroidered Wide Pants',
     category: 'ready-to-wear',
     comingSoon: true,
-    image: imgArt1,
-    galleryImages: [imgArt1, imgArt10],
+    image: '/images/article_1_maroon_1786450472291.jpg',
+    galleryImages: [
+      '/images/article_1_maroon_1786450472291.jpg',
+      '/images/article_10_rust_heart_1786450608201.jpg'
+    ],
     description: 'A deep maroon burgundy V-neck straight tunic shirt paired with ivory white wide-leg trousers patterned with small maroon embroidered hearts. Modern Pakistani fusion pret.',
     fabric: 'Pure Cotton Silk & Breathable Linen',
     colors: [
@@ -49,8 +35,11 @@ export const FEATURED_PRODUCTS: DressProduct[] = [
     title: 'Vintage Tapestry Floral Corset & Rose Tiered Skirt',
     category: 'formal',
     comingSoon: true,
-    image: imgArt2,
-    galleryImages: [imgArt2, imgArt6],
+    image: '/images/article_2_floral_1786450493069.jpg',
+    galleryImages: [
+      '/images/article_2_floral_1786450493069.jpg',
+      '/images/article_6_pink_wrap_1786450552217.jpg'
+    ],
     description: 'A romantic cottagecore vintage floral tapestry corset vest layered over a crisp collared button-up blouse, styled with a high-waisted floor-length dusty pink tiered skirt.',
     fabric: 'Handwoven Tapestry & Crêpe Silk Skirt',
     colors: [
@@ -73,8 +62,11 @@ export const FEATURED_PRODUCTS: DressProduct[] = [
     title: 'Soft Lilac Lavender Tiered Midi Dress',
     category: 'ready-to-wear',
     comingSoon: true,
-    image: imgArt3,
-    galleryImages: [imgArt3, imgArt11],
+    image: '/images/article_3_lavender_1786450506443.jpg',
+    galleryImages: [
+      '/images/article_3_lavender_1786450506443.jpg',
+      '/images/article_11_sage_lavender_1786450619358.jpg'
+    ],
     description: 'An ethereal pastel lilac tiered empire-waist dress featuring a keyhole slit collar and 3/4 elasticated sleeves for effortless everyday chic elegance.',
     fabric: 'Breathable Soft Cotton Georgette',
     colors: [
@@ -96,8 +88,11 @@ export const FEATURED_PRODUCTS: DressProduct[] = [
     title: 'Deep Burgundy Jacket & Tiered White Linen Ensemble',
     category: 'festive',
     comingSoon: true,
-    image: imgArt4,
-    galleryImages: [imgArt4, imgArt15],
+    image: '/images/article_4_burgundy_1786450519984.jpg',
+    galleryImages: [
+      '/images/article_4_burgundy_1786450519984.jpg',
+      '/images/article_15_olive_shirt_1786450669997.jpg'
+    ],
     description: 'A relaxed deep burgundy linen shirt jacket worn open over a pristine white multi-tiered long dress. Effortlessly sophisticated resort and festive pret.',
     fabric: 'Pure Slub Linen & Breathable Cotton Slub',
     colors: [
@@ -119,8 +114,11 @@ export const FEATURED_PRODUCTS: DressProduct[] = [
     title: 'Crisp White Tied Shirt & Midnight Black Tiered Maxi',
     category: 'ready-to-wear',
     comingSoon: true,
-    image: imgArt5,
-    galleryImages: [imgArt5, imgArt12],
+    image: '/images/article_5_tie_skirt_1786450539149.jpg',
+    galleryImages: [
+      '/images/article_5_tie_skirt_1786450539149.jpg',
+      '/images/article_12_black_leopard_1786450630970.jpg'
+    ],
     description: 'A crisp white collared button-down shirt styled with a tied front knot at the waist, paired with a fluid high-waisted black tiered maxi skirt.',
     fabric: 'Egyptian Poplin Cotton & Crêpe Rayon',
     colors: [
@@ -142,8 +140,11 @@ export const FEATURED_PRODUCTS: DressProduct[] = [
     title: 'Dusty Rose Crossover Wrap Top & Flared White Skirt',
     category: 'festive',
     comingSoon: true,
-    image: imgArt6,
-    galleryImages: [imgArt6, imgArt7],
+    image: '/images/article_6_pink_wrap_1786450552217.jpg',
+    galleryImages: [
+      '/images/article_6_pink_wrap_1786450552217.jpg',
+      '/images/article_7_pink_peplum_1786450564365.jpg'
+    ],
     description: 'A dusty rose crossover wrap-style blouse tailored with contrast white piping trims along the rounded overlap hem, over a flared multi-tier white maxi skirt.',
     fabric: 'Pure Cotton Viscose & Sheer Linen',
     colors: [
@@ -165,8 +166,11 @@ export const FEATURED_PRODUCTS: DressProduct[] = [
     title: 'Blush Pink Peplum Top with Knot Accents & White Maxi',
     category: 'festive',
     comingSoon: true,
-    image: imgArt7,
-    galleryImages: [imgArt7, imgArt16],
+    image: '/images/article_7_pink_peplum_1786450564365.jpg',
+    galleryImages: [
+      '/images/article_7_pink_peplum_1786450564365.jpg',
+      '/images/article_16_burgundy_skirt_1786450682860.jpg'
+    ],
     description: 'A romantic blush pink peplum blouse with traditional knot button closures, keyhole chest detail, puff sleeves, paired with a multi-tiered white linen maxi skirt.',
     fabric: 'Cotton Linen & Fine Slub Blend',
     colors: [
@@ -188,8 +192,11 @@ export const FEATURED_PRODUCTS: DressProduct[] = [
     title: 'Plaid Monochrome Overall Dress & White Turtleneck',
     category: 'formal',
     comingSoon: true,
-    image: imgArt8,
-    galleryImages: [imgArt8, imgArt9],
+    image: '/images/article_8_grey_plaid_1786450576088.jpg',
+    galleryImages: [
+      '/images/article_8_grey_plaid_1786450576088.jpg',
+      '/images/article_9_brown_suit_1786450594421.jpg'
+    ],
     description: 'A tailored grey and charcoal grid-plaid Pinafore overall jumper dress with waist tie belt and front button placket, layered over a fitted white turtleneck top.',
     fabric: 'Houndstooth Plaid Wool Blend & Ribbed Knit',
     colors: [
@@ -211,8 +218,11 @@ export const FEATURED_PRODUCTS: DressProduct[] = [
     title: 'Dark Chocolate Brown Wrap Suit with Eyelet Ruffle Lace',
     category: 'formal',
     comingSoon: true,
-    image: imgArt9,
-    galleryImages: [imgArt9, imgArt1],
+    image: '/images/article_9_brown_suit_1786450594421.jpg',
+    galleryImages: [
+      '/images/article_9_brown_suit_1786450594421.jpg',
+      '/images/article_1_maroon_1786450472291.jpg'
+    ],
     description: 'A dark chocolate brown crossover wrap jacket suit boasting delicate eyelet ruffle lace trim along the notched lapels and matching wide-leg trousers cuffs.',
     fabric: 'Rich Cotton Linen & Embroidered Eyelet Lace',
     colors: [
@@ -234,8 +244,11 @@ export const FEATURED_PRODUCTS: DressProduct[] = [
     title: 'Terracotta Rust Kurta & Cream Heart Motif Trousers',
     category: 'ready-to-wear',
     comingSoon: true,
-    image: imgArt10,
-    galleryImages: [imgArt10, imgArt1],
+    image: '/images/article_10_rust_heart_1786450608201.jpg',
+    galleryImages: [
+      '/images/article_10_rust_heart_1786450608201.jpg',
+      '/images/article_1_maroon_1786450472291.jpg'
+    ],
     description: 'A rich rust terracotta straight tunic kurta with split neckline collar, styled with off-white wide-leg palazzo pants adorned with contrast terracotta heart motifs.',
     fabric: 'Pure Raw Silk & Slub Cotton',
     colors: [
@@ -257,8 +270,11 @@ export const FEATURED_PRODUCTS: DressProduct[] = [
     title: 'Sage Green Silk Kurta & Lavender Dhoti Dupatta Set',
     category: 'festive',
     comingSoon: true,
-    image: imgArt11,
-    galleryImages: [imgArt11, imgArt3],
+    image: '/images/article_11_sage_lavender_1786450619358.jpg',
+    galleryImages: [
+      '/images/article_11_sage_lavender_1786450619358.jpg',
+      '/images/article_3_lavender_1786450506443.jpg'
+    ],
     description: 'A sage olive green silk tunic kurta with scalloped lace hem and chest tassel ties, paired with soft lavender draped dhoti salwar pants and matching sheer organza dupatta.',
     fabric: 'Pure Viscose Silk & Sheer Organza Dupatta',
     colors: [
@@ -280,8 +296,11 @@ export const FEATURED_PRODUCTS: DressProduct[] = [
     title: 'Onyx Black V-Neck Tunic & Leopard Print Wide Pants',
     category: 'ready-to-wear',
     comingSoon: true,
-    image: imgArt12,
-    galleryImages: [imgArt12, imgArt14],
+    image: '/images/article_12_black_leopard_1786450630970.jpg',
+    galleryImages: [
+      '/images/article_12_black_leopard_1786450630970.jpg',
+      '/images/article_14_black_bow_1786450658038.jpg'
+    ],
     description: 'An oversized minimalist onyx black slit V-neck tunic paired with dramatic high-contrast black and white brushstroke leopard print wide-leg flared trousers.',
     fabric: 'Pure Crêpe Silk & Textured Jacquard',
     colors: [
@@ -303,8 +322,11 @@ export const FEATURED_PRODUCTS: DressProduct[] = [
     title: 'Canary Yellow Tassel Kurta Set with Draped Dupatta',
     category: 'festive',
     comingSoon: true,
-    image: imgArt13,
-    galleryImages: [imgArt13, imgArt11],
+    image: '/images/article_13_yellow_pastel_1786450647218.jpg',
+    galleryImages: [
+      '/images/article_13_yellow_pastel_1786450647218.jpg',
+      '/images/article_11_sage_lavender_1786450619358.jpg'
+    ],
     description: 'A bright pastel canary yellow 3-piece suit featuring a tunic with keyhole tassel tie neckline, pleated sleeve cuffs, straight trousers, and flowing matching dupatta.',
     fabric: 'Fine Lawn Cotton & Lightweight Organza',
     colors: [
@@ -326,8 +348,11 @@ export const FEATURED_PRODUCTS: DressProduct[] = [
     title: 'Black Bow Embroidered Tunic & Tulip Motif Pants',
     category: 'ready-to-wear',
     comingSoon: true,
-    image: imgArt14,
-    galleryImages: [imgArt14, imgArt5],
+    image: '/images/article_14_black_bow_1786450658038.jpg',
+    galleryImages: [
+      '/images/article_14_black_bow_1786450658038.jpg',
+      '/images/article_5_tie_skirt_1786450539149.jpg'
+    ],
     description: 'A classic black V-neck tunic embroidered with contrast white ribbon bow motifs along the sleeves and hemline, paired with geometric black and white tulip dhoti pants.',
     fabric: 'Pure Cotton Linen',
     colors: [
@@ -349,8 +374,11 @@ export const FEATURED_PRODUCTS: DressProduct[] = [
     title: 'White Collared Blouse & Olive Green Tiered High-Low Maxi',
     category: 'formal',
     comingSoon: true,
-    image: imgArt15,
-    galleryImages: [imgArt15, imgArt8],
+    image: '/images/article_15_olive_shirt_1786450669997.jpg',
+    galleryImages: [
+      '/images/article_15_olive_shirt_1786450669997.jpg',
+      '/images/article_8_grey_plaid_1786450576088.jpg'
+    ],
     description: 'A chic 2-in-1 shirt dress with a white button-down collared blouse attached to a high-waisted olive green multi-tiered high-low hem maxi skirt.',
     fabric: 'Egyptian Cotton & Crisp Olive Linen',
     colors: [
@@ -372,8 +400,11 @@ export const FEATURED_PRODUCTS: DressProduct[] = [
     title: 'Deep Burgundy Bow Blouse & Black Tiered Maxi Skirt',
     category: 'formal',
     comingSoon: true,
-    image: imgArt16,
-    galleryImages: [imgArt16, imgArt7],
+    image: '/images/article_16_burgundy_skirt_1786450682860.jpg',
+    galleryImages: [
+      '/images/article_16_burgundy_skirt_1786450682860.jpg',
+      '/images/article_7_pink_peplum_1786450564365.jpg'
+    ],
     description: 'A deep burgundy V-neck blouse featuring triple front ribbon bow ties and peplum waist, paired with a sweeping jet black multi-tier long maxi skirt.',
     fabric: 'Soft Cotton Silk & Chiffon Skirt',
     colors: [
