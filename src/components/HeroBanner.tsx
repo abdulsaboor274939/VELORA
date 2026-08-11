@@ -108,8 +108,14 @@ export const HeroBanner: React.FC<HeroBannerProps> = ({
               <img
                 src={HERO_IMAGE}
                 alt="VELORA Bespoke Luxury Couture Model"
-                referrerPolicy="no-referrer"
                 className="w-full h-[480px] sm:h-[540px] object-cover object-top hover:scale-105 transition duration-700"
+                onError={(e) => {
+                  const target = e.currentTarget;
+                  if (!target.dataset.retried) {
+                    target.dataset.retried = 'true';
+                    target.src = HERO_IMAGE.startsWith('/') ? HERO_IMAGE.slice(1) : '/' + HERO_IMAGE;
+                  }
+                }}
               />
               {/* Overlay Badge */}
               <div className="absolute bottom-6 left-6 right-6 bg-[#1F1918]/90 backdrop-blur-md p-4 rounded-2xl border border-[#362A28] shadow-2xl flex items-center justify-between text-white">

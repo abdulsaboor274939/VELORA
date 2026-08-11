@@ -55,8 +55,14 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({
               <img
                 src={activeImg}
                 alt={product.title}
-                referrerPolicy="no-referrer"
                 className="w-full h-full object-cover object-top"
+                onError={(e) => {
+                  const target = e.currentTarget;
+                  if (!target.dataset.retried) {
+                    target.dataset.retried = 'true';
+                    target.src = activeImg.startsWith('/') ? activeImg.slice(1) : '/' + activeImg;
+                  }
+                }}
               />
             </div>
 
@@ -71,7 +77,18 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({
                       activeImg === imgUrl ? 'border-amber-900 shadow-md' : 'border-stone-300 opacity-70'
                     }`}
                   >
-                    <img src={imgUrl} alt="" referrerPolicy="no-referrer" className="w-full h-full object-cover" />
+                    <img
+                      src={imgUrl}
+                      alt=""
+                      className="w-full h-full object-cover"
+                      onError={(e) => {
+                        const target = e.currentTarget;
+                        if (!target.dataset.retried) {
+                          target.dataset.retried = 'true';
+                          target.src = imgUrl.startsWith('/') ? imgUrl.slice(1) : '/' + imgUrl;
+                        }
+                      }}
+                    />
                   </button>
                 ))}
               </div>

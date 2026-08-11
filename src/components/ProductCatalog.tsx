@@ -149,8 +149,18 @@ export const ProductCatalog: React.FC<ProductCatalogProps> = ({
                     <img
                       src={product.image}
                       alt={product.title}
-                      referrerPolicy="no-referrer"
                       className="w-full h-full object-cover object-top group-hover:scale-105 transition duration-700"
+                      onError={(e) => {
+                        const target = e.currentTarget;
+                        if (!target.dataset.retried) {
+                          target.dataset.retried = 'true';
+                          if (product.image.startsWith('/')) {
+                            target.src = product.image.slice(1);
+                          } else {
+                            target.src = '/' + product.image;
+                          }
+                        }
+                      }}
                     />
 
                     {/* Badges */}

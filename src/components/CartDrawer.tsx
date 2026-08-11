@@ -81,8 +81,15 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
                       <img
                         src={item.product.image}
                         alt=""
-                        referrerPolicy="no-referrer"
                         className="w-full h-full object-cover object-top"
+                        onError={(e) => {
+                          const target = e.currentTarget;
+                          if (!target.dataset.retried && item.product) {
+                            target.dataset.retried = 'true';
+                            const img = item.product.image;
+                            target.src = img.startsWith('/') ? img.slice(1) : '/' + img;
+                          }
+                        }}
                       />
                     ) : (
                       <div className="w-full h-full bg-[#2C241E] text-amber-100 p-2 flex flex-col items-center justify-center text-center">

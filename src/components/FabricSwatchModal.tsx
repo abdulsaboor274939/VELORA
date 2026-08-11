@@ -18,7 +18,7 @@ export const FabricSwatchModal: React.FC<FabricSwatchModalProps> = ({
       weight: '120 GSM',
       breathability: 'High (Ideal for All Seasons)',
       drape: 'Structured Fluidity',
-      image: 'https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?auto=format&fit=crop&q=80&w=800',
+      image: '/images/festive_pret_thumb_1786448721319.jpg',
       description: 'Handwoven blend of natural organic cotton fibers and pure Mulberry silk. Offers soft breathable sheen without clinginess.',
       care: 'Dry clean recommended or gentle handwash in cold water.',
     },
@@ -28,7 +28,7 @@ export const FabricSwatchModal: React.FC<FabricSwatchModalProps> = ({
       weight: '140 GSM',
       breathability: 'Very High',
       drape: 'Relaxed Tailored',
-      image: 'https://images.unsplash.com/photo-1607083206869-4c7672e72a8a?auto=format&fit=crop&q=80&w=800',
+      image: '/images/bridal_collection_thumb_1786448683300.jpg',
       description: 'Luxe slub textured weave with distinctive tactile yarn depth. Gives timeless cottagecore drape to flared dresses.',
       care: 'Cold gentle wash. Cool iron while damp.',
     },
@@ -38,7 +38,7 @@ export const FabricSwatchModal: React.FC<FabricSwatchModalProps> = ({
       weight: '60 GSM',
       breathability: 'Airy & Sheer',
       drape: 'Crisp Ethereal Flare',
-      image: 'https://images.unsplash.com/photo-1528459801416-a9e53bbf4e17?auto=format&fit=crop&q=80&w=800',
+      image: '/images/formal_gown_thumb_1786448697794.jpg',
       description: 'Ultra-lightweight crisp organza with subtle iridescent luster. Crafted for layered sleeves, dupattas, and gheras.',
       care: 'Strict dry clean only.',
     },
@@ -48,7 +48,7 @@ export const FabricSwatchModal: React.FC<FabricSwatchModalProps> = ({
       weight: '180 GSM',
       breathability: 'Medium',
       drape: 'Regal Sculpted Structure',
-      image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=800',
+      image: '/images/velvet_couture_thumb_1786448738198.jpg',
       description: 'Intricately woven brocade jacquard featuring raised metallic threadwork. Provides formal stiffness to corset bodices.',
       care: 'Dry clean only.',
     },
@@ -115,8 +115,14 @@ export const FabricSwatchModal: React.FC<FabricSwatchModalProps> = ({
                   <img
                     src={fabric.image}
                     alt={fabric.name}
-                    referrerPolicy="no-referrer"
                     className="w-10 h-10 rounded-xl object-cover border border-[#E5C5C0]"
+                    onError={(e) => {
+                      const target = e.currentTarget;
+                      if (!target.dataset.retried) {
+                        target.dataset.retried = 'true';
+                        target.src = fabric.image.startsWith('/') ? fabric.image.slice(1) : '/' + fabric.image;
+                      }
+                    }}
                   />
                   <div>
                     <h5 className="font-serif text-xs font-bold text-[#1F1918]">
@@ -137,11 +143,17 @@ export const FabricSwatchModal: React.FC<FabricSwatchModalProps> = ({
               <img
                 src={selectedFabric.image}
                 alt={selectedFabric.name}
-                referrerPolicy="no-referrer"
                 className={`w-full h-full object-cover transition-transform duration-500 ${
                   isZoomed ? 'scale-150 cursor-zoom-out' : 'scale-100 cursor-zoom-in'
                 }`}
                 onClick={() => setIsZoomed(!isZoomed)}
+                onError={(e) => {
+                  const target = e.currentTarget;
+                  if (!target.dataset.retried) {
+                    target.dataset.retried = 'true';
+                    target.src = selectedFabric.image.startsWith('/') ? selectedFabric.image.slice(1) : '/' + selectedFabric.image;
+                  }
+                }}
               />
 
               <div className="absolute top-3 right-3 bg-black/60 backdrop-blur-md text-white px-3 py-1 rounded-full text-[10px] font-mono flex items-center gap-1.5 pointer-events-none">
